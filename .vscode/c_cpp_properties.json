@@ -1,0 +1,31 @@
+// .vscode/c_cpp_properties.json
+{
+  "version": 4,
+  "configurations": [
+    {
+      "name": "Linux-Headers",
+      "compilerPath": "C:/mingw64/bin/gcc.exe",
+      // Windows 상의 GCC(=Mingw)를 쓰되…
+      "intelliSenseMode": "gcc-x64",
+      "cStandard":   "c11",
+      "cppStandard": "c++17",
+      // glibc 헤더 활성화용 매크로
+      "compilerArgs": [
+        "-D__linux__",
+        "-D__unix__",
+        "-D_GNU_SOURCE"
+      ],
+      "includePath": [
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/linux-headers/include"
+      ],
+      "browse": {
+        "path": [
+          "${workspaceFolder}",
+          "${workspaceFolder}/linux-headers/include"
+        ],
+        "limitSymbolsToIncludedHeaders": true
+      }
+    }
+  ]
+}
